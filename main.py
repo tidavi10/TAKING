@@ -1,23 +1,42 @@
-print("***************************")
-print("*****CONSULTA DO CEP*******")
-print("***************************")
-print("*********TAKING************")
-print()
-print("******APRESENTAÇÃO*********")
-print("***************************")
-print()
-cep_input = input('DIGITE O CEP PARA CONSULTA: ')
+import requests
 
-if len(cep_input) !=8:
-    print('QUANTIDADE DIGITOS INVÁLIDA!')
-    exit()
 
-request = requests.get('http://viacep.com.br/ws/()/json/'.format(cep_input))
+def main():
+    print('####################')
+    print('## TAKING API CEP ##')
+    print('####################')
+    print()
 
-address_data = request_json()
+    cep_input = input('PESQUISE O CEP AO API TAKING: ')
 
-if 'erro' not in address_data:
-print('CEP ENCONTRADO SUCESSO')
-print('CEP: {}'.format(address_data['cep']))
-else
-print('{}: CEP INVÁLIDO.'.format(cep_input))
+    if len(cep_input) != 8:
+        print('Quantidade de dígitos inválida!')
+        exit()
+
+    request = requests.get('https://viacep.com.br/ws/{}/json/'.format(cep_input))
+
+    address_data = request.json()
+
+    if 'erro' not in address_data:
+        print('==> CEP ENCONTRADO <==')
+
+        print('CEP: {}'.format(address_data['cep']))
+        print('Logradouro: {}'.format(address_data['logradouro']))
+        print('Complemento: {}'.format(address_data['complemento']))
+        print('Bairro: {}'.format(address_data['bairro']))
+        print('Cidade: {}'.format(address_data['localidade']))
+        print('Estado: {}'.format(address_data['uf']))
+
+    else:
+        print('{}: CEP inválido.'.format(cep_input))
+
+    print('---------------------------------')
+    option = int(input('Deseja realizar uma nova consulta ?\n1. Sim\n2. Sair\n'))
+    if option == 1:
+        main()
+    else:
+        print('FINALIZADO_TAKING...')
+
+
+if __name__ == '__main__':
+    main()
