@@ -1,6 +1,6 @@
 from flask import Flask
 import requests
-
+print("##TESTE DAVI")
 app = Flask(__name__)
 
 @app.route('/', methods=['POST', 'GET'])
