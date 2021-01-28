@@ -3,7 +3,7 @@ import requests
 
 def main():
     print('####################')
-    print('## TAKING API CEP ##')
+    print('## Consulta CEP ##')
     print('####################')
     print()
 
