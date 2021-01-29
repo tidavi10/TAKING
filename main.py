@@ -6,6 +6,9 @@ def main():
     print('##EXERCÍCIO BRANCH##')
     print('## TAKING CEP TESTE DAVI ##')
     print('ESTUDANDO PARA EFETUAR MERGE')
+    print('ESTUDANDO PARA EFETUAR MERGE')
+    print('ESTUDANDO PARA EFETUAR MERGE')
+    print('ESTUDANDO PARA EFETUAR MERGE')
     print('####################')
     print()
 
