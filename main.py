@@ -2,8 +2,14 @@ import requests
 
 def main():
     print('####################')
+    print('DATA DE HOJE 29/01')
     print('##EXERCÍCIO BRANCH##')
     print('## TAKING CEP TESTE DAVI ##')
+    print('## TESTE DAVI ##')
+    print('## 123456 7890 ##')
+    print('ESTUDANDO PARA EFETUAR MERGE')
+    print('####################')
+    print('####################')
     print('####################')
     print()
 
