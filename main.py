@@ -26,6 +26,7 @@ def main():
         print('Bairro: {}'.format(address_data['bairro']))
         print('Cidade: {}'.format(address_data['localidade']))
         print('Estado: {}'.format(address_data['uf']))
+        print('Estado: {}'.format(address_data['localidade']))
 
     else:
         print('{}: CEP inválido.'.format(cep_input))
