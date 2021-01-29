@@ -2,12 +2,11 @@ import requests
 
 def main():
     print('####################')
-    print('##EXERCÍCIO BRANCH##')
-    print('## TAKING CEP TESTE DAVI ##')
+    print('## Integração API para consultar CEP ##')
     print('####################')
     print()
 
-    cep_input = input('PESQUISE O CEP AO API TAKING: ')
+    cep_input = input('Digite o CEP que você deseja consultar: ')
 
     if len(cep_input) != 8:
         print('Quantidade de dígitos inválida!')
